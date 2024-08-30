@@ -1,5 +1,6 @@
 
 class TestManager {
+
     constructor(api) {
         this.api = api;
         this.cache = {
@@ -27,8 +28,6 @@ class TestManager {
     return this.cache.projectIds.get(name);
     }
 
-
-
     async getOrCreateSuiteIdByName(projectId, suiteName) {
         const cacheKey = `${projectId}_${suiteName}`;
         if (this.cache.suites.has(cacheKey)) {
@@ -54,7 +53,6 @@ class TestManager {
         this.cache.plans.set(cacheKey, planId);
         return planId
     }
-
 
     async getOrCreateRunIdByName(planId, runName, suiteId) {
         const cacheKey = `${planId}_${runName}`;

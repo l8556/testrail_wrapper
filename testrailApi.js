@@ -2,6 +2,7 @@ const TestRail = require('testrail-api');
 const Config = require('./config');
 
 class TestRailAPI {
+
     /**
      * Initializes the TestRailAPI instance with configuration details.
      * @param {string} configPath - Path to the configuration file.
@@ -128,7 +129,6 @@ class TestRailAPI {
         return (await this.testrail.getPlans(projectId)).body;
     }
 
-
     /**
      * Retrieves all tests associated with a given run.
      * @param {number} runId - The ID of the run.
@@ -215,7 +215,6 @@ class TestRailAPI {
             name: planName,
             description: description
         });
-
         return plan.body.id;
     }
 

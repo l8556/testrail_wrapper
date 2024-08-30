@@ -51,7 +51,7 @@ class TestRailAPI {
         return section ? section.id : null;
     }
 
-     /**
+    /**
      * Retrieves the ID of a plan by its name within a given project.
      * @param {number} projectId - The ID of the project.
      * @param {string} planName - The name of the plan.
@@ -63,7 +63,7 @@ class TestRailAPI {
         return plan ? plan.id : null;
     }
 
-     /**
+    /**
      * Retrieves all projects from TestRail.
      * @returns {Promise<Array>} - A list of all projects.
      */
@@ -80,7 +80,7 @@ class TestRailAPI {
         return (await this.testrail.getSuites(projectId)).body;
     }
 
-     /**
+    /**
      * Retrieves all runs associated with a given plan.
      * @param {number} planId - The ID of the plan.
      * @returns {Promise<Array>} - A list of runs associated with the plan.
@@ -148,7 +148,7 @@ class TestRailAPI {
         return (await this.testrail.getSections(projectId, { suite_id: suiteId })).body;
     }
 
-     /**
+    /**
      * Creates a new test case within a given section.
      * @param {number} sectionId - The ID of the section.
      * @param {string} title - The title of the test case.
@@ -178,7 +178,7 @@ class TestRailAPI {
         return section.body.id;
     }
 
-     /**
+    /**
      * Creates a new suite within a given project.
      * @param {number} projectId - The ID of the project.
      * @param {string} suiteName - The name of the new suite.
@@ -193,7 +193,7 @@ class TestRailAPI {
         return suite.body.id;
     }
 
-     /**
+    /**
      * Adds a result to a test case.
      * @param {number} testId - The ID of the test case.
      * @param {Object} result - The result object containing status and other details.
@@ -219,7 +219,7 @@ class TestRailAPI {
         return plan.body.id;
     }
 
-     /**
+    /**
      * Adds an entry to a plan.
      * @param {number} planId - The ID of the plan.
      * @param {Object} entryData - The data for the new plan entry.

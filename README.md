@@ -5,8 +5,10 @@ TestRail API which provides a set of methods for managing
 projects, sets, sections, plans, runs and test cases in TestRail.
 
 ## Configuration
+
 Create a configuration file `~/.testrail/testrail_config.json`.
 The configuration file should include the following fields:
+
 ```json
 {
   "url": "https://your-testrail-instance-url",

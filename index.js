@@ -1,13 +1,10 @@
-const TestRailClient = require('./TestRailClient');
+const TestRailAPI = require('./testrailApi');
+const TestManager = require('./testManager');
 
-// Создание клиента TestRail с конфигурацией по умолчанию
-const testrailClient = new TestRailClient();
+const api = new TestRailAPI();
+const testManager = new TestManager(api);
 
-// Использование методов класса
-testrailClient.getProjectIdByName('Test Project')
-    .then(project => {
-        console.log(project);
-    })
-    .catch(err => {
-        console.error('Failed to fetch project by name:', err.message);
-    });
+module.exports = {
+    api,
+    testManager
+};

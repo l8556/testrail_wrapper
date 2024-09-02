@@ -23,14 +23,14 @@ The configuration file should include the following fields:
 Add a Result to a Test Case
 
 ```javascript
-const testRail = require('./testrail');
+const { testManager } = require('./index');
 
 const result = {
     status_id: 1, // Passed
     comment: "Test passed successfully."
 };
 
-testRail.testManager.addResultToCase(
+testManager.addResultToCase(
     "Test Project",
     "8.2.0 (build:34)",
     "All Values of Image Formats",

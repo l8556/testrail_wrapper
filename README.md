@@ -1,11 +1,8 @@
 # TestRail Wrapper
 
-TestRailAPI is a Node.js class for interacting with
-the TestRail API. This class provides a set of methods to manage
-projects, suites, sections, plans, runs, and test cases in TestRail.
-It abstracts common TestRail operations into easy-to-use methods,
-making it simpler to automate TestRail interactions.
-
+TestRail Wrapper is a tool for interacting with the
+TestRail API which provides a set of methods for managing
+projects, sets, sections, plans, runs and test cases in TestRail.
 
 ## Configuration
 Create a configuration file `~/.testrail/testrail_config.json`.

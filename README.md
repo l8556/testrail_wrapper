@@ -4,6 +4,12 @@ TestRail Wrapper is a tool for interacting with the
 TestRail API which provides a set of methods for managing
 projects, sets, sections, plans, runs and test cases in TestRail.
 
+## Install the dependencies
+
+```bash
+npm install
+```
+
 ## Configuration
 
 Create a configuration file `~/.testrail/testrail_config.json`.

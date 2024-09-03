@@ -39,7 +39,7 @@ testManager.addResultToCase(
     "Test Project", // Project name
     "8.2.0 (build:34)", // Plan name
     "All Values of Image Formats", // Suite name
-    "Check supported <bmp> Image Format", // Case name
+    "Check supported <bmp> Image Format", // Test case name
     result
 )
     .then(() => console.log('Test result added successfully.'))

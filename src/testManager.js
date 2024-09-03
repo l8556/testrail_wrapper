@@ -174,17 +174,17 @@ class TestManager {
      * @param {string} projectName - The name of the project.
      * @param {string} planName - The name of the plan.
      * @param {string} suiteName - The name of the suite.
-     * @param {string} caseTitle - The title of the test case.
+     * @param {string} testName - The title of the test case.
      * @param {Object} result - The result to be added.
      * @param {string} [sectionTitle='All Test Cases'] - The title of the section where the test case is located.
      * @returns {Promise<void>}
      */
-    async addResultToCase(projectName, planName, suiteName, caseTitle, result, sectionTitle = 'All Test Cases') {
+    async addResultToCase(projectName, planName, suiteName, testName, result, sectionTitle = 'All Test Cases') {
         const projectId = await this.getProjectIdByName(projectName);
         const planId = await this.getOrCreatePlanIdByName(projectId, planName);
         const suiteId = await this.getOrCreateSuiteIdByName(projectId, suiteName);
         const runId = await this.getOrCreateRunIdByName(planId, suiteName, suiteId);
-        const testId = await this.getOrCreateTestIdByName(runId, caseTitle, projectId, suiteId, sectionTitle);
+        const testId = await this.getOrCreateTestIdByName(runId, testName, projectId, suiteId, sectionTitle);
 
         await this.api.addResult(testId, result);
     }

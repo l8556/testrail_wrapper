@@ -162,7 +162,7 @@ class TestManager {
         }
 
         const sectionId = await this.api.getSectionIdByName(projectId, suiteId, sectionTitle)
-        || await this.api.createSection(projectId, suiteId, sectionTitle)
+            || await this.api.createSection(projectId, suiteId, sectionTitle)
 
         this.cache.sections.set(cacheKey, sectionId);
 
